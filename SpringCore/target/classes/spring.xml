@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" 
+"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- <bean id="info" class="com.ashu.spring.SpringCore.Customer" >
+	<property name="customerId" value="12345"></property>
+	<property name="customerName" value="Ashutosh"></property>
+	<property name="customerContact" value="8984807192"></property>
+	<property name="address" ref="address"></property>
+	</bean>
+	
+	<bean id="address" class="com.ashu.spring.SpringCore.Address">
+	<property name="street" value="Brookfield"></property>
+	<property name="city" value="Bangalore"></property>
+	<property name="state" value="Karnataka"></property>
+	<property name="zip" value="847404"></property>
+	<property name="Country" value="India"></property> -->
+	
+	
+	<bean id="info" class="com.ashu.spring.SpringCore.Customer" >
+	<constructor-arg value="12345"></constructor-arg>
+	<constructor-arg value="Ashutosh"></constructor-arg>
+	<constructor-arg value="8984807192"></constructor-arg>
+	<constructor-arg ref="address"></constructor-arg>
+	</bean>
+	
+	<bean id="address" class="com.ashu.spring.SpringCore.Address">
+	<constructor-arg value="Brookfield"></constructor-arg>
+	<constructor-arg value="Bangalore"></constructor-arg>
+	<constructor-arg value="Karnataka"></constructor-arg>
+	<constructor-arg value="847404"></constructor-arg>
+	<constructor-arg value="India"></constructor-arg>
+		
+	</bean>
+
+</beans>
