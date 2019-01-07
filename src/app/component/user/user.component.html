@@ -1,0 +1,44 @@
+<h1>
+  hey gabriel {{message}}
+ 
+</h1>
+<h2>hobbies</h2>
+
+<form (submit)= "addHobby(hobby.value)">
+    <label for = "hobby">Hobby:</label>
+  <input type= "text" #hobby>
+</form>
+
+<ul>
+  <li> hobbies: {{hobbies}} </li>
+  <li> email: {{email}} </li>
+  <li> meet me at : {{Address.street}} {{Address.city}}</li>
+</ul>
+<button (click)= "onClick()"> click here</button>
+<h2>Edit User</h2>
+<form>
+  <div>
+      <label for = "name"> Name:</label><br>
+      <input type="text" [(ngModel)]="message" name="message">
+  </div>
+
+  <div>
+      <label for = "email"> Email:</label><br>
+      <input type="text" [(ngModel)]="email" name="email">
+  </div>
+  <div>
+      <label for = "street"> Street:</label><br>
+      <input type="text" [(ngModel)]="Address.street" name="Address.street">
+  </div>
+  <div>
+      <label for = "city"> City:</label><br>
+      <input type="text" [(ngModel)]="Address.city" name="Address.city">
+  </div>
+</form>
+<h2>hobbies</h2>
+<ul>
+  <li *ngFor= "let hobby of hobbies, let i= index ">
+    {{i+1}}  {{hobby}} <button (click)= "deleteHobby(hobby)"> x </button>
+  </li>
+</ul>
+
